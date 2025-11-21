@@ -1,0 +1,21 @@
+# Git ignore file to prevent tracking the parent directories
+
+# Mac files
+.DS_Store
+
+# This tells Git to ignore everything outside of this current folder
+../../../
+../../
+/Users/ronifrumkis/*
+
+# Common VS Code and temporary files
+.vscode/
+.zprofile
+.zsh_history
+.zsh_sessions/
+.CFUserTextEncoding
+.gitconfig
+.viminfo
+
+# Other irrelevant folders
+hw3-ronifrumkis/

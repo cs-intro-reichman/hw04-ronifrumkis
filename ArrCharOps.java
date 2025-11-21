@@ -95,7 +95,7 @@ public class ArrCharOps {
             arr3 [i] = arr1 [i];
          }
           for (int i = 0 ; i < arr2.length ; i++) {
-            arr3 [i] = arr2 [i];
+            arr3 [arr1.length + i] = arr2 [i];
          }
         return arr3;
     }

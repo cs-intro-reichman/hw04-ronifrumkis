@@ -1,7 +1,7 @@
 public class Primes {
     public static void main(String[] args) {
         System.out.println( "Prime numbers up to 30:");
-        int N = 30;
+        int N = Integer.parseInt(args [0]);
         int count = 0;
 
         for (int i = 2; i <= N ; i++) {

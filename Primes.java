@@ -12,12 +12,14 @@ public class Primes {
             else if (i % 2 != 0) {
                     if (i % 3 != 0) {        
                         if (i % 5 != 0) {
+                            if (i % 7 != 0) {
                         System.out.println(i); 
                         count ++;
                     }
                 }
             }
         }
+     }
             double totalNumbers = N-1;
             double percentage = ((double) count / totalNumbers) * 100;
             System.out.println("There are " + count + " primes between " + 2 + " and " + N + " ("  + (int) percentage + "%" + " are primes)");

@@ -158,34 +158,52 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-    
-    String lowerStr1 = str1.toLowerCase();
-    String lowerStr2 = str2.toLowerCase();
 
-    int len1 = str1.length();
-    int len2 = str2.length();
-    int minLength = Math.min(len1, len2); 
+        if ( str1.length() == str2.length()) {
 
-    for (int i = 0; i < minLength; i++) {
-        char char1 = lowerStr1.charAt(i);
-        char char2 = lowerStr2.charAt(i);
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                if (str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                } else {
+                    return 1;
+                } 
+            }
+        }
+        return 0;
+        }
 
-        if (char1 != char2) {
-            if (char1 < char2) {
-                return -1; 
-            } else {
-                return 1;  
-            }        
+        boolean issame = true;
+        if (str1.length() < str2.length()) {
+             for (int i = 0; i < str1.length(); i++) {
+                if (str1.charAt(i) != str2.charAt(i)) {
+                    issame = false;
+                if (str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                } else {
+                    return 1;
+                } 
+            }  
+        }
+        if (issame) return -1;
+        }
+
+        issame = true;
+
+       if (str1.length() > str2.length()) {
+             for (int i = 0; i < str2.length(); i++) {
+                if (str1.charAt(i) != str2.charAt(i)) {
+                    issame = false;
+                if (str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                } else {
+                    return 1;
+                } 
+            }  
+        }
+        if (issame) return 1;  
+        }
+        return -2;
         }
     }
-    if (len1 < len2) {
-        return -1; 
-    } else if (len1 > len2) {
-        return 1; 
-    } else {
-        return 0;  
-    }
 
-    }
-
-}

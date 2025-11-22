@@ -5,7 +5,7 @@ public class Primes {
         int count = 0;
 
         for (int i = 2; i <= N ; i++) {
-            if (i == 2 || i == 3 || i == 5) {
+            if (i == 2 || i == 3 || i == 5 || i == 7) {
                 System.out.println(i); 
                 count ++;
                 }

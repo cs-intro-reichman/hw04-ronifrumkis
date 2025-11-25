@@ -37,7 +37,7 @@ public class MyString {
             return false; 
         }
 
-        for (int i = 0 ; i <= str1.length() - str2.length() ; i++) {
+        for (int i = 0 ; i <= str1.length()- str2.length() ; i++) {
             boolean match = true;
 
             for (int j = 0 ; j < str2.length() ; j++) {
